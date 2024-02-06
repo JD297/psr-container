@@ -1,0 +1,51 @@
+{
+    "name": "jd297/psr-container",
+    "type": "library",
+    "description": "Simple implementation of PSR-11 (Container Interface)",
+    "keywords": [
+        "psr-11",
+        "container",
+        "dependency-injection",
+        "di"
+    ],
+    "license": "BSD-2-Clause",
+    "homepage": "https://github.com/jd297/psr-container",
+    "authors": [
+        {
+            "name": "JD297",
+            "email": "jan.dommasch297@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "psr/container": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^v3.11",
+        "phpunit/phpunit": "^9.5.26",
+        "phpstan/phpstan": "^1.9"
+    },
+    "provide": {
+        "psr/container-implementation": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jd297\\Psr\\Container\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jd297\\Psr\\Container\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "scripts": {
+        "reformat": "php-cs-fixer fix --allow-risky=yes --ansi",
+        "unit": "phpunit",
+        "analyse": "phpstan analyse"
+    }
+}
